@@ -7,7 +7,6 @@ Python is a high-level, general-purpose programming language. It is known for it
 # Why Python for DevOps?
 Python is one of the most popular programming languages in the DevOps ecosystem because it is simple, powerful, and well-supported by cloud and automation tools.
 
----
 
 # Python is an Interpreted Language
 
@@ -23,7 +22,6 @@ Unlike some languages that require compilation before execution, Python translat
 - No separate compilation step
 - Better portability across operating systems
 
----
 
 # Python is Dynamically Typed
 
@@ -45,30 +43,25 @@ A list is an ordered and mutable collection of items.
 - Indexed
 
 ## Example
-
-```python
 fruits = ["Apple", "Banana", "Mango"]
-```
+
 
 ## Common Operations
 
 ### Add Element
 
-```python
 fruits.append("Orange")
-```
+
 
 ### Remove Element
 
-```python
 fruits.remove("Banana")
-```
+
 
 ### Length of List
 
-```python
+
 len(fruits)
-```
 
 # 2. Tuple
 
@@ -95,7 +88,6 @@ Once created, tuple elements cannot be modified.
 - Coordinates
 - Read-only data
 
----
 
 # 3. Dictionary
 
@@ -112,25 +104,19 @@ Each key must be unique.
 
 ## Example
 
-```python
 student = {
     "name": "Mohit",
     "age": 22,
     "city": "Panchkula"
 }
-```
 
 ## Add New Key
 
-```python
 student["course"] = "Python"
-```
 
 ## Update Existing Key
 
-```python
 student["age"] = 23
-```
 
 # 4. Set
 
@@ -146,6 +132,4 @@ Duplicate values are automatically removed.
 
 ## Add Element
 
-```python
 numbers.add(6)
-```
