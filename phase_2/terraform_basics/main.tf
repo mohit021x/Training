@@ -11,6 +11,9 @@ resource "random_string" "suffix"{
 
 resource "aws_s3_bucket" "demo_bucket"{
     bucket = "${var.bucket_name}-${random_string.suffix.result}" #This will create a unique bucket name by appending a random string to the bucket name
+    lifecycle {
+      prevent_destroy = true
+    }
 }
 
 resource "random_pet" "pet_name"{
