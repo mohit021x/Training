@@ -12,7 +12,7 @@ resource "random_string" "suffix"{
 resource "aws_s3_bucket" "demo_bucket"{
     bucket = "${var.bucket_name}-${random_string.suffix.result}" #This will create a unique bucket name by appending a random string to the bucket name
     lifecycle {
-      prevent_destroy = true
+      prevent_destroy = false
     }
 }
 
@@ -25,4 +25,9 @@ resource "random_pet" "pet_name"{
 resource "local_file" "temp_file"{
     content = "HI! this content comes from a another resource called random_pet and the name of the pet is ${random_pet.pet_name.id}" #This will create a file with the content specified in the content argument
     filename = "temp_file.txt"
+}
+
+resource "aws_iam_user" "name"{
+    count = length(var.user_names) #This will create a user for each name specified in the user_names variable
+    name = var.user_names[count.index]
 }

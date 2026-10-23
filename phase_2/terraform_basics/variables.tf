@@ -15,3 +15,9 @@ output "instance_details"{
         public_ip = aws_instance.my_ec2.public_ip
     }
 }
+
+variable "user_names"{
+    description = "List of user names to be created"
+    type = list(string)
+    default = ["John", "Mike", "Tom"]
+}
